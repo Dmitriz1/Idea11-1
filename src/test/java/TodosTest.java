@@ -21,6 +21,7 @@ public class TodosTest {
         Epic epic = new Epic(55, subtasks);
 
         Todos todos = new Todos();
+        todos.add(epic);
 
         Task[] expected2 = {epic};
         Task[] actual2 = todos.search("Яйца");
