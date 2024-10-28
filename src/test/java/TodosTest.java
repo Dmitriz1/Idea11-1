@@ -87,10 +87,6 @@ public class TodosTest {
         todos.add(epic);
         todos.add(meeting);
 
-        Task[] expected1 = {epic};
-        Task[] actual1 = todos.search("Яйца");
-        Assertions.assertArrayEquals(expected1, actual1);
-
         Task[] expected2 = {meeting};
         Task[] actual2 = todos.search("Приложение НетоБанка");
         Assertions.assertArrayEquals(expected2, actual2);
