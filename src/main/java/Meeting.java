@@ -2,6 +2,7 @@ public class Meeting extends Task {
     protected String topic;
     protected String projectName;
     protected String startTime;
+
     public Meeting(int id, String topic, String projectName, String startTime) {
         super(id);
         this.topic = topic;
@@ -18,6 +19,7 @@ public class Meeting extends Task {
     public String getStartTime() {
         return startTime;
     }
+
     @Override
     public boolean matches(String query) {
         if (topic.contains(query)) {
