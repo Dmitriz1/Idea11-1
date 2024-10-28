@@ -107,7 +107,8 @@ public class TodosTest {
     @Test
     public void shouldFindSeveralTasks() {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
-        Todos todos = new Todos();
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
+        Epic epic = new Epic(55, subtasks);
 
         Meeting meeting = new Meeting(
                 555,
@@ -116,7 +117,10 @@ public class TodosTest {
                 "Во вторник после обеда"
         );
 
+        Todos todos = new Todos();
+        
         todos.add(simpleTask);
+        todos.add(epic);
         todos.add(meeting);
 
         Task[] expected1 = {simpleTask, meeting};
